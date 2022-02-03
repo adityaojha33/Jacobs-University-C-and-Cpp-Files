@@ -1,0 +1,15 @@
+a.  When 'using namespace std;' is commented out the error displays
+    "use of undeclared identifier" for cout, cin, endl.
+    So without using the standard 'std' namespace the compiler cannot
+    recognize the cout, cin, endl which falls under std namespace.
+    Then, either every time cin, cout or endl is used it should be
+    used like (std::cin, std::cout, std::endl). The proper solution 
+    is just including the namespace so the std:: does not need to be
+    written everytime a standard namespace component is used.
+
+b.  Here seems to be a similar problem where the error is 
+    "use of undeclared identifier" for name or hunger or for the objects
+    that fall on the class of critter. In the Critter.h file it can be seen
+    that (name and hunger) fall under the class "Critter".
+    So if that class is not included in the function the compiler cannot
+    recognize what name or hunger is used for. 
